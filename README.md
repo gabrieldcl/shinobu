@@ -1,37 +1,22 @@
-# Typescript Quickstarter
+# Shinobu
 
-Typescript Quickstarter is a personal project built to help getting started with typescript on Node platform.
+Shinobu is a simple discord bot that can peform simple tasks like playing youtube videos on a voice channel. My plan is to add more features like Dota2 stats, MOTD and random image embed.
 
-# What is included
+# Commands avaible right now
 
-  - Typescript
-  - Webpack setup
-  - Nodemon
+  - !play
+  - !leave
 
-### Getting Started
+# How to run the bot?
 
-Clone the repository
+  - Clone the repo
+  - run `npm install`
+  - Follow the `.env.example` to create your `.env`
+  - run `npm start`
+  - Invite the bot to your server
 
-```sh
-$ git clone --depth=1 https://github.com/gugamm/ts-quick-start.git <your-project-name>
-```
-
-Then install the dependencies
-
-```sh
-$ cd <your-project-name>
-$ npm install
-```
-
-### Scripts
-
-Below is a description of each included script
-
-| Script | Description |
-| ------ | ------ |
-| start | Launch node application in watch mode |
-| build | Build all TS code into /dist folder  |
+For steps 3 and 5 I recommend you to visit https://discord.com/developers/applications. Here you will be able to create your invite link and create your auth token.
 
 ### License
 
-**MIT**
+**WTF?**
