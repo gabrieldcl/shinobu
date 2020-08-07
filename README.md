@@ -4,8 +4,14 @@ Shinobu is a simple discord bot that can peform simple tasks like playing youtub
 
 # Commands avaible right now
 
-  - !play
-  - !leave
+ - !help
+ - !leave
+ - !play
+ - !pause
+ - !resume
+ - !skip
+ - !stop
+ - !volume
 
 # How to run the bot?
 
