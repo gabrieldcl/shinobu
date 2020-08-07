@@ -1,0 +1,32 @@
+{
+  "name": "shinobu",
+  "version": "1.0.0",
+  "description": "Shinobu is a simple discord bot",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=development nodemon",
+    "build": "cross-env NODE_ENV=production webpack --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabrieldcl/shinobu.git"
+  },
+  "author": "gabrieldcl",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.11.1",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/preset-typescript": "^7.10.4",
+    "@types/node": "^14.0.27",
+    "babel-loader": "^8.1.0",
+    "cross-env": "^7.0.2",
+    "fork-ts-checker-webpack-plugin": "^5.0.14",
+    "nodemon": "^2.0.4",
+    "source-map-loader": "^1.0.1",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.7",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  }
+}
