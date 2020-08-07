@@ -19,6 +19,7 @@
     "@babel/preset-env": "^7.11.0",
     "@babel/preset-typescript": "^7.10.4",
     "@types/node": "^14.0.27",
+    "@types/webpack-env": "^1.15.2",
     "babel-loader": "^8.1.0",
     "cross-env": "^7.0.2",
     "fork-ts-checker-webpack-plugin": "^5.0.14",
@@ -30,6 +31,7 @@
     "webpack-cli": "^3.3.12"
   },
   "dependencies": {
+    "babel-plugin-require-context-hook": "^1.0.0",
     "discord.js": "^12.2.0",
     "dotenv": "^8.2.0",
     "ffmpeg-static": "^4.2.6",

@@ -1,5 +1,5 @@
 import { Message } from 'discord.js'
-import { commandsHandlerMap } from './commandsHandlerMap'
+import { commandListener } from './utils/commandListener'
 
 export const processCommand = async (receivedMessage: Message) => {
   const fullCommand = receivedMessage.content.substr(1)
@@ -7,12 +7,5 @@ export const processCommand = async (receivedMessage: Message) => {
   const primaryCommand = splitedCommand[0]
   const args = splitedCommand.slice(1)
 
-  const commandHandler = commandsHandlerMap[primaryCommand]
-
-  if (commandHandler) {
-    await commandHandler(receivedMessage, args)
-    return
-  }
-
-  receivedMessage.channel.send(`Are you asking for an impossible task? Baka`)
+  await commandListener.handleCommand(primaryCommand, receivedMessage, args)
 }

@@ -1,5 +1,6 @@
 import Discord from 'discord.js'
 import { processCommand } from './proccessCommand'
+import './commands'
 
 const client = new Discord.Client()
 
@@ -13,7 +14,7 @@ client.on('ready', async () => {
   }
 
   console.log(`Connected as ${client.user.tag}`)
-  client.user.setActivity('with Gabs')
+  client.user.setActivity('with Gabs <3')
 })
 
 client.on('message', async (receivedMessage) => {
