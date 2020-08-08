@@ -35,11 +35,11 @@ module.exports = {
           cacheDirectory: true,
           babelrc: false,
           presets: [
+            '@babel/preset-typescript',
             [
               '@babel/preset-env',
               { targets: { node: true } }
-            ],
-            '@babel/preset-typescript'
+            ]
           ],
           plugins: [
             ['@babel/plugin-proposal-class-properties', { loose: true }]
