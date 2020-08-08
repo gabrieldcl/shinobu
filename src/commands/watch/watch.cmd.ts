@@ -45,4 +45,4 @@ const handleWatch = async (receivedMessage: Message, args: string[]) => {
   await channel.send(`Ok Master, I've already setup everything for you. Follow this link: ${currentPageUrl}`)
 }
 
-commandListener.registerHandler('watch', handleWatch, `Watch`)
+// commandListener.registerHandler('watch', handleWatch, `Watch`)
