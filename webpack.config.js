@@ -18,9 +18,13 @@ module.exports = {
     __filename: false
   },
   resolve: {
-    extensions: ['.ts', '.js', '.json']
+    extensions: ['.ts', '.js', '.json'],
+    mainFields: ['main']
   },
   devtool: 'source-map',
+  optimization: {
+    minimize: false
+  },
   module: {
     rules: [
       {
@@ -33,7 +37,7 @@ module.exports = {
           presets: [
             [
               '@babel/preset-env',
-              { targets: 'maintained node versions' }
+              { targets: { node: true } }
             ],
             '@babel/preset-typescript'
           ],
@@ -46,9 +50,11 @@ module.exports = {
   },
   plugins: [
     new ForkTsCheckerWebpackPlugin(),
+    new webpack.NamedModulesPlugin(),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'production'),
       'process.env.SHINOBU_AUTH_TOKEN': JSON.stringify(process.env.SHINOBU_AUTH_TOKEN),
+      'process.env.WEBPACK_BUILD': JSON.stringify(true)
     })
   ]
 }

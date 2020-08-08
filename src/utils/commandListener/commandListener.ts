@@ -14,6 +14,8 @@ export class CommandListener {
   }
 
   registerHandler = (commandKey: string, handler: CommandHandler, description: string) => {
+    console.log(`Command ${commandKey} registered`)
+
     this.commandsMap[commandKey] = {
       description,
       handler,

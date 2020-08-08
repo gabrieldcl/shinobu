@@ -1,11 +1,14 @@
+import { requireContext, importAll } from './utils/require-context'
 import Discord from 'discord.js'
 import { processCommand } from './proccessCommand'
-import './commands'
+
+if (process.env.WEBPACK_BUILD) {
+  importAll(require.context(`./commands/`, true, /cmd.ts$/))
+} else {
+  importAll(requireContext(`${__dirname}/commands`, true, /cmd.ts$/))
+}
 
 const client = new Discord.Client()
-
-// test channel id = 740233844325744771
-// server id = 159720593686659072
 
 client.on('ready', async () => {
   if (!client.user) {

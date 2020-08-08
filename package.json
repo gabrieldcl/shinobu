@@ -31,7 +31,6 @@
     "webpack-cli": "^3.3.12"
   },
   "dependencies": {
-    "babel-plugin-require-context-hook": "^1.0.0",
     "discord.js": "^12.2.0",
     "dotenv": "^8.2.0",
     "ffmpeg-static": "^4.2.6",
