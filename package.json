@@ -5,7 +5,9 @@
   "main": "dist/index.js",
   "scripts": {
     "start": "cross-env NODE_ENV=development nodemon",
-    "build": "cross-env NODE_ENV=production webpack --config webpack.config.js"
+    "build": "cross-env NODE_ENV=production webpack --config webpack.config.js",
+    "tsc": "tsc",
+    "start-prod": "node -r dotenv/config ./dist/index.js"
   },
   "repository": {
     "type": "git",

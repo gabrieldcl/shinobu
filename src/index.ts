@@ -3,9 +3,9 @@ import Discord from 'discord.js'
 import { processCommand } from './proccessCommand'
 
 if (process.env.WEBPACK_BUILD) {
-  importAll(require.context(`./commands/`, true, /cmd.ts$/))
+  importAll(require.context(`./commands/`, true, /cmd.(ts|js)$/))
 } else {
-  importAll(requireContext(`${__dirname}/commands`, true, /cmd.ts$/))
+  importAll(requireContext(`${__dirname}/commands`, true, /cmd.(ts|js)$/))
 }
 
 const client = new Discord.Client()
